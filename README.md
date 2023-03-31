@@ -1,31 +1,53 @@
-1 Physical GPUs, 1 Logical GPUs
-Usage: complex_FER.py [OPTIONS]
+## Complex Facial Expression Recognition Using Deep Knowledge Distillation of Basic Features
 
-  A program to train and evaluate the models described in the paper "Complex
-  Facial Expression Recognition Using Deep Knowledge Distillation of Basic
-  Features" by A. Maiden and B. Nakisa. The program can be run in three
-  phases, corresponding with those described in the paper, as well as a
-  visualisation phase:
+This repository contains code for training and evaluating the models described in the paper "Complex Facial Expression Recognition Using Deep Knowledge Distillation of Basic Features" by Angus Maiden and Bahareh Nakisa. The code is developed and maintained by Angus Maiden. The program can be run in three phases, corresponding with those described in the paper, as well as a visualisation phase:
+- **Basic FER Phase**  
+Train a model to recognise the basic emotions (Anger, Disgust, Fear, Happy, Sad, Surprise).
+- **Continual Learning Phase**  
+The trained model from the Basic FER Phase is used to learn new compound expression classes sequentially, by incrementally adding new classes until all of the expressions have been learned.
+- **Few-Shot Learning Phase**  
+The trained model from the Basic FER Phase is used to learn new compound expression classes, one at a time, using only a very small number of samples of the new class.
+- **Visualisation**  
+Produce the visualisations from the paper.
 
-  1. Basic FER Phase: Train a model to recognise the basic emotions (Anger,
-  Disgust, Fear, Happy, Sad, Surprise). 2. Continual Learning Phase: The
-  trained model from the Basic FER Phase is used to learn new compound
-  expression classes sequentially, by incrementally adding new classes until
-  all of expressions have been learned. 3. Few-Shot Learning Phase: The
-  trained model from the Basic FER Phase is used to learn new compound
-  expression classes, one at a time, using only a very small number of samples
-  of the new class. 4. Visualisation: Produce the visualisations from the
-  paper.
+The dataset used for training is Compound Facial Expressions of Emotion (CFEE), which can be downloaded from https://cbcsl.ece.ohio-state.edu/compound.html. You will need to request access from the dataset provider. The unzipped dataset folder "CFEE_Database_230" should be placed in the "data/raw" folder. The program will save the processed data to the "data/processed" folder after face detection and alignment. The program will save the trained models to the "models" folder, results to the "results" folder, and images and visualisations to the "images" folder.
 
-  The dataset used for training is the CFEE Database 230, which can be
-  downloaded from https://cbcsl.ece.ohio-state.edu/compound.html. You will
-  need to request access from the dataset provider. The unzipped dataset
-  folder "CFEE_Database_230" should be placed in the "data/raw" folder. The
-  program will save the processed data to the "data/processed" folder after
-  face detection and alignment. The program will save the trained models to
-  the "models" folder, results to the "results" folder, and images and
-  visualisations to the "images" folder.
+## Installation
 
+Create a new python environment:
+```
+pip install venv
+python -m venv complex-FER
+```
+Activate the environment  
+For Linux:
+```
+source env/bin/activate
+```
+For Windows:  
+```
+.\env\Scripts\activate
+```
+Install dependancies:
+```
+pip install -r requirements.txt
+```
+
+# Usage
+
+The code in this repository is designed to be run as a self-contained command line interface (CLI).
+
+To run the experiments in different phases and with different hyperparameters, run the command:
+```
+python -m src.complex-FER <options>
+```
+
+You can see a list of options and their usage by running:
+```
+python -m src.complex-FER --help
+```
+
+```
 Options:
   --phase TEXT                   Phase of the experiment to run. Options: all,
                                  basic, cont, fewshot, vis. Default: all
@@ -72,3 +94,4 @@ Options:
                                  training data.
   --subj INTEGER                 Subject to use for visualisation. Default: 1.
   --help                         Show this message and exit.
+  ```
