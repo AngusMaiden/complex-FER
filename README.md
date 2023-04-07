@@ -14,6 +14,14 @@ The dataset used for training is Compound Facial Expressions of Emotion (CFEE), 
 
 ## Installation
 
+Prerequisites:
+Python 3.9
+
+Download the repository and navigate to it:
+```
+git clone https://github.com/AngusMaiden/complex-FER.git
+cd complex-FER
+```
 Create a new python environment:
 ```
 pip install venv
@@ -24,27 +32,27 @@ For Linux:
 ```
 source env/bin/activate
 ```
-For Windows:  
+(or) For Windows:  
 ```
 .\env\Scripts\activate
 ```
-Install dependancies:
+Install the program:
 ```
-pip install -r requirements.txt
+pip install .
 ```
 
 # Usage
 
 The code in this repository is designed to be run as a self-contained command line interface (CLI).
 
-To run the experiments in different phases and with different hyperparameters, run the command:
+To run the experiments in different phases and with different hyperparameters, run this command from within the `complex-FER` directory from the installation steps above:
 ```
-python -m src.complex-FER <options>
+complex-FER <options>
 ```
 
 You can see a list of options and their usage by running:
 ```
-python -m src.complex-FER --help
+complex-FER --help
 ```
 
 ```
