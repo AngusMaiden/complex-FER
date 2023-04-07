@@ -35,10 +35,10 @@ if gpus:
 else:
     print('No GPU found on system')
 
-import constants
-from data import utils, process
-from models import train, evaluate
-from visualisation import visualise
+from . import constants
+from .data import utils, process
+from .models import train, evaluate
+from .visualisation import visualise
 
 @click.command()
 @click.option('--phase', default='all', help='Phase of the experiment to run.\nOptions: all, basic, cont, fewshot, vis. Default: all')

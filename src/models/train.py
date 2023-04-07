@@ -6,7 +6,7 @@ from tensorflow.keras.applications import ResNet50V2
 from tensorflow.keras.regularizers import l2
 from tensorflow.data import Dataset
 
-import constants
+from .. import constants
 from . import evaluate
 
 cl_initializer = initializers.GlorotUniform()

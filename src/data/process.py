@@ -11,7 +11,7 @@ from deepface import DeepFace
 import random
 import pickle
 
-import constants
+from .. import constants
 
 def detectface(emotion_ids, data_dir):
     file_list = [f for f in data_dir.glob('*/Images*/*[!_detectface].[jJ][pP][gG]')\

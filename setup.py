@@ -13,7 +13,6 @@ setup(
         'matplotlib==3.5.3',
         'scikit_learn==1.1.2',
         'tensorflow==2.9.2',
-        'absl',
         'opencv-python==4.6.0.66',
         'deepface==0.0.79',
         'Pillow==9.5.0',
@@ -21,7 +20,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'complex-FER = src:main',
+            'complex-FER = src.complex_FER:main',
         ],
     },
 )

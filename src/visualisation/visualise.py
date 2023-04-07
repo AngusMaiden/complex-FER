@@ -6,8 +6,8 @@ from matplotlib import pyplot as plt
 import gc
 import cv2
 
-import constants
-from data import process
+from .. import constants
+from ..data import process
 
 def get_image_and_label(file, emotion_list, emotion_ids, num_classes, img_height, img_width):
     img, label = process.process_path(file, emotion_ids, num_classes, img_height, img_width)

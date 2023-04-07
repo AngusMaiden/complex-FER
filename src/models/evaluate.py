@@ -6,7 +6,7 @@ from tabulate import tabulate
 import pickle
 from datetime import datetime
 
-import constants
+from .. import constants
 
 def plot_training_history(*histories, filename, patience):
     
