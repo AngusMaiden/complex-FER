@@ -9,16 +9,13 @@ import absl.logging
 absl.logging.set_verbosity(absl.logging.ERROR)
 import gc
 import math
-from tabulate import tabulate
-from glob import glob
-from matplotlib import pyplot as plt
 import click
 import pickle
 import time
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras import layers, models, optimizers, losses, initializers, Sequential
+from tensorflow.keras import layers, models, optimizers, losses, Sequential
 from tensorflow.keras.utils import set_random_seed
 from tensorflow.config.experimental import list_physical_devices, list_logical_devices, set_memory_growth
 from tensorflow.keras.callbacks import EarlyStopping

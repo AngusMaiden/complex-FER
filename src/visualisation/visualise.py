@@ -3,7 +3,6 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers, models, Model
 from matplotlib import pyplot as plt
-from tabulate import tabulate
 import gc
 import cv2
 

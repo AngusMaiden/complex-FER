@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Prophylactically update all the packages, optional.
+# Update all linux packages.
 sudo apt -y update && sudo apt -y upgrade
 
 # Install NVIDIA driver
@@ -31,10 +31,6 @@ pip install -r requirements.txt
 
 # Clone repository
 git clone https://github.com/AngusMaiden/complex-FER.git
-
-# Download Database and Models from Cloud Storage
-gcloud storage cp -r gs://$BUCKET_NAME/CFEE_Database_230 ~/complex-FER
-gcloud storage cp -r gs://$BUCKET_NAME/Models ~/complex-FER
 
 # Reboot required
 sudo reboot
