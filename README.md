@@ -25,16 +25,16 @@ cd complex-FER
 Create a new python environment:
 ```
 pip install venv
-python -m venv complex-FER
+python -m venv venv
 ```
 Activate the environment  
 For Linux:
 ```
-source env/bin/activate
+source venv/bin/activate
 ```
 (or) For Windows:  
 ```
-.\env\Scripts\activate
+.\venv\Scripts\activate
 ```
 Install the program:
 ```
