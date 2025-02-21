@@ -1,6 +1,6 @@
 ## Complex Facial Expression Recognition Using Deep Knowledge Distillation of Basic Features
 
-This repository contains code for training and evaluating the models described in the paper "Complex Facial Expression Recognition Using Deep Knowledge Distillation of Basic Features" by Angus Maiden and Bahareh Nakisa. The code is developed and maintained by Angus Maiden. The program can be run in three phases, corresponding with those described in the paper, as well as a visualisation phase:
+This repository contains code for training and evaluating the models described in the paper [Complex Facial Expression Recognition Using Deep Knowledge Distillation of Basic Features](https://arxiv.org/abs/2308.06197) by Angus Maiden and Bahareh Nakisa. The code is developed and maintained by Angus Maiden. The program can be run in three phases, corresponding with those described in the paper, as well as a visualisation phase:
 - **Basic FER Phase**  
 Train a model to recognise the basic emotions (Anger, Disgust, Fear, Happy, Sad, Surprise).
 - **Continual Learning Phase**  
